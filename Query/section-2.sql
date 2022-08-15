@@ -1,0 +1,1 @@
+SELECT s.nama FROM tbl_siswa s LEFT JOIN tbl_teman t ON s.id = t.id LEFT JOIN tbl_paket p ON s.id = p.id  WHERE p.salary < (SELECT b.salary FROM tbl_teman a LEFT JOIN tbl_paket b ON a.teman_id = b.id WHERE a.id = s.id) ORDER BY p.salary;

@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "ae8d65ca-b8fd-4763-8c42-f750f2ad13d1",
+		"name": "Invoice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14965425"
+	},
+	"item": [
+		{
+			"name": "Create Invoice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"invoice_no\": \"1\",\r\n    \"date\": \"2022-08-15 22:25:29\",\r\n    \"customer_name\": \"Budi\",\r\n    \"salesperson_name\": \"Andi\",\r\n    \"payment_type\": \"cash\",\r\n    \"notes\": \"Pembeli Pertama Di Toko\",\r\n    \"list_products_sold\": [\r\n        {\r\n            \"id\": 1,\r\n            \"product_name\": \"Punch / Pembolong Kertas Joyko 30XL\",\r\n            \"quantity\": 5,\r\n            \"total_cost_of_goods_sold\": 1000,\r\n            \"total_price_sold\": 15000\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"product_name\": \"Loose Leaf Isi Kertas File Binder Joyko\",\r\n            \"quantity\": 10,\r\n            \"total_cost_of_goods_sold\": 7000,\r\n            \"total_price_sold\": 12000\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"product_name\": \"Gunting Scissors Joyko SC-828~848\",\r\n            \"quantity\": 10,\r\n            \"total_cost_of_goods_sold\": 10000,\r\n            \"total_price_sold\": 13500\r\n        },\r\n        {\r\n            \"id\": 8,\r\n            \"product_name\": \"Buku Cerita Anak Bergambar Buku Dongeng Anak Binatang Lengkap Bilingual Full Colour\",\r\n            \"quantity\": 100,\r\n            \"total_cost_of_goods_sold\": 1000,\r\n            \"total_price_sold\": 5000\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/invoice",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"invoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Invoice",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"invoice_no\": \"1\",\r\n    \"date\": \"2022-08-15 22:30:29\",\r\n    \"customer_name\": \"Rima Sari\",\r\n    \"salesperson_name\": \"Andi\",\r\n    \"payment_type\": \"cash\",\r\n    \"notes\": \"Update Pembeli Pertama\",\r\n    \"list_products_sold\": [\r\n        {\r\n            \"id\": 1,\r\n            \"product_name\": \"Punch / Pembolong Kertas Joyko 30XL\",\r\n            \"quantity\": 5,\r\n            \"total_cost_of_goods_sold\": 1000,\r\n            \"total_price_sold\": 15000\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"product_name\": \"Loose Leaf Isi Kertas File Binder Joyko\",\r\n            \"quantity\": 10,\r\n            \"total_cost_of_goods_sold\": 7000,\r\n            \"total_price_sold\": 12000\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"product_name\": \"Gunting Scissors Joyko SC-828~848\",\r\n            \"quantity\": 10,\r\n            \"total_cost_of_goods_sold\": 10000,\r\n            \"total_price_sold\": 13500\r\n        },\r\n        {\r\n            \"id\": 8,\r\n            \"product_name\": \"Buku Cerita Anak Bergambar Buku Dongeng Anak Binatang Lengkap Bilingual Full Colour\",\r\n            \"quantity\": 100,\r\n            \"total_cost_of_goods_sold\": 1000,\r\n            \"total_price_sold\": 5000\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/invoice/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"invoice",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Invoice",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/invoice/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"invoice",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Invoices",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
